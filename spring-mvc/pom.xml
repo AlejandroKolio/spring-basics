@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <jstl.version>1.2.1</jstl.version>
+        <jstl.version>1.2</jstl.version>
         <logging.version>1.2</logging.version>
     </properties>
 
@@ -33,15 +33,15 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${jstl.version}</version>
         </dependency>
-        <!-- jstl-api -->
+        <!--jstl-api-->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
-            <version>1.2</version>
+            <version>${jstl.version}</version>
         </dependency>
-        <!-- commons-logging -->
+        <!--commons-logging-->
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
@@ -54,11 +54,14 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <!--servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
+
+
     </dependencies>
 
     <build>

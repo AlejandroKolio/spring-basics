@@ -1,18 +1,18 @@
 <%--
   Created by IntelliJ IDEA.
   User: alexandershakhov
-  Date: 05.05.2018
-  Time: 18:16
+  Date: 06.05.2018
+  Time: 13:36
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Hello World</title>
+    <title>User Confirmation</title>
 </head>
 <body>
-    <h4>Student name: ${param.studentName}</h4>
-    <a href="showForm" name="Back">back</a>
-The Message: ${message}
+
+<p>The student is confirmed: ${user.firstName} ${user.lastName} </p>
+
 </body>
 </html>
