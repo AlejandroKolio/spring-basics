@@ -1,6 +1,6 @@
 package com.udemy.spring;
 
-import com.udemy.app.model.FootballCoach;
+import com.udemy.spring.model.FootballCoach;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class PracticeHelloSpringApp {

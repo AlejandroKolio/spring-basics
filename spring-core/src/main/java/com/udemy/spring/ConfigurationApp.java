@@ -1,9 +1,9 @@
 package com.udemy.spring;
 
-import com.udemy.app.model.FootballCoach;
-import com.udemy.app.model.SwimCoach;
-import com.udemy.app.service.FortuneService;
-import com.udemy.app.service.RandomFortuneService;
+import com.udemy.spring.model.FootballCoach;
+import com.udemy.spring.model.SwimCoach;
+import com.udemy.spring.service.FortuneService;
+import com.udemy.spring.service.RandomFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

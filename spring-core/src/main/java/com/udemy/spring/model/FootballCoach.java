@@ -1,6 +1,6 @@
 package com.udemy.spring.model;
 
-import com.udemy.app.service.FortuneService;
+import com.udemy.spring.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
