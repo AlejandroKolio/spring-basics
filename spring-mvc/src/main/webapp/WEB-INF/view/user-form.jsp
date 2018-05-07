@@ -12,12 +12,31 @@
     <title>User Registration Form</title>
 </head>
 <body>
-    <form:form action="processForm" modelAttribute="user">
-        First Name: <form:input path="firstName"/>
-        <br>
-        Last Name: <form:input path="lastName"/>
-        <input type="submit" value="Submit">
-    </form:form>
+<form:form action="processForm" modelAttribute="user">
+    First Name: <form:input path="firstName"/>
+    <br>
+    Last Name: <form:input path="lastName"/>
+    <br>
+    Country:
+    <br>
+    <form:select path="country">
+        <form:options items="${user.countries}"/>
+    </form:select>
+    <br>
+    Language:
+    <br>
+    Java <form:radiobutton path="programmingLanguage" value="Java"/>
+    C# <form:radiobutton path="programmingLanguage" value="C#"/>
+    C++ <form:radiobutton path="programmingLanguage" value="C++"/>
+    Swing <form:radiobutton path="programmingLanguage" value="Swing"/>
+    <br>
+    Operating Systems:
+    <br>
+    Linux <form:checkbox path="operatingSystems" value="Linux"/>
+    Mac OS <form:checkbox path="operatingSystems" value="Mac OS"/>
+    MS Windows <form:checkbox path="operatingSystems" value="MS Windows"/>
+    <input type="submit" value="Submit">
+</form:form>
 
 
 </body>

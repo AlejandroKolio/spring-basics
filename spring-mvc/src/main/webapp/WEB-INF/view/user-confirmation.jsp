@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>User Confirmation</title>
@@ -13,6 +14,16 @@
 <body>
 
 <p>The student is confirmed: ${user.firstName} ${user.lastName} </p>
-
+<br>
+<p>The student country is:   ${user.country} </p>
+<br>
+<p>The student program language is:   ${user.programmingLanguage} </p>
+<br>
+<p>Operating Systems</p>
+<ul>
+    <c:forEach var="os" items="${user.operatingSystems}">
+        <li>${os}</li>
+    </c:forEach>
+</ul>
 </body>
 </html>

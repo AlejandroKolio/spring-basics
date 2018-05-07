@@ -7,17 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- add entry to enable component scanning -->
+
 	<context:component-scan base-package="com.udemy.spring" />
-    <!-- Define your beans here -->
-    
- 	<!--<bean id="myGolfCoach" class="com.udemy.spring.model.GolfCoach" />-->
-
-	<!--<bean id="myFortuneService" class="com.udemy.spring.service.RandomFortuneService" />
-
-	<bean id="myGolfCoach" class="com.udemy.spring.model.GolfCoach">
-		&lt;!&ndash; set up constructor injection &ndash;&gt;
-		<constructor-arg ref="myFortuneService" />
-	</bean>-->
+	<context:property-placeholder location="classpath:sport.properties"/>
 
 
 </beans>
