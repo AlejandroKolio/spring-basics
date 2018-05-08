@@ -25,6 +25,9 @@ public class CustomerController {
 
     @RequestMapping("/processCustomerForm")
     public String processCustomerForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
+        System.out.println("Last Name: |" + customer.getLastName() + "|");
+        System.out.println("First Name: |" + customer.getFirstName() + "|");
+        System.out.println("Binding Result: " + result);
         if(!result.hasErrors()) {
             return "customer-confirmation";
         } else {
