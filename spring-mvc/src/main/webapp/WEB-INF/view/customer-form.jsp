@@ -52,6 +52,12 @@
                         <form:errors cssClass="error" path="postalCode"/>
                     </label>
                 </div>
+                <div class="form-group">
+                    <label class="form-control">
+                        Postal Code: <form:input path="courseCode"/>
+                        <form:errors cssClass="error" path="courseCode"/>
+                    </label>
+                </div>
                 <input type="submit" value="Submit" class="btn btn-primary"/>
             </form:form>
         </div>

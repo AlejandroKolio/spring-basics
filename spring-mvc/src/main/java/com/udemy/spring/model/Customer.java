@@ -1,5 +1,6 @@
 package com.udemy.spring.model;
 
+import com.udemy.spring.annotation.CourseCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,5 +29,6 @@ public class Customer {
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 digits/characters")
     private String postalCode;
 
+    @CourseCode
     private String courseCode;
 }
