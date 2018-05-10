@@ -8,7 +8,17 @@ import java.sql.DriverManager;
  */
 public class TestJdbc {
     public static void main(String[] args) {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        /*
+        * Standard url from tutorial fail with exception java.sql.SQLException: The server timezone value 'UTC' is unrecognized or represents more than one timezone.
+        * Found solution here https://stackoverflow.com/questions/26515700/mysql-jdbc-driver-5-1-33-time-zone-issue
+        *
+        * So URL is update with timezone configurations.
+        * */
+        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true" +
+                "&useJDBCCompliantTimezoneShift=true" +
+                "&useLegacyDatetimeCode=false&serverTimezone=UTC" +
+                "&useSSL=false";
+
         String user = "hbstudent";
         String pass = "hbstudent";
 
