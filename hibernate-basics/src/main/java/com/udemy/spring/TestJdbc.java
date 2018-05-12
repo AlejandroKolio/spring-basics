@@ -1,5 +1,7 @@
 package com.udemy.spring;
 
+import com.udemy.spring.entity.Student;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -14,10 +16,7 @@ public class TestJdbc {
         *
         * So URL is update with timezone configurations.
         * */
-        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true" +
-                "&useJDBCCompliantTimezoneShift=true" +
-                "&useLegacyDatetimeCode=false&serverTimezone=UTC" +
-                "&useSSL=false";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
 
         String user = "hbstudent";
         String pass = "hbstudent";
