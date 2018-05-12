@@ -47,19 +47,23 @@
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>6.0.9.Final</version>
         </dependency>
-
-        <!-- jstl -->
         <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- jstl -->
+<!--    <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
-        <!--jstl-api-->
+        &lt;!&ndash;jstl-api&ndash;&gt;
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
             <version>${jstl.version}</version>
-        </dependency>
+        </dependency>-->
         <!--commons-logging-->
         <dependency>
             <groupId>commons-logging</groupId>

@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-control">
-                        Postal Code: <form:input path="courseCode"/>
+                        Course Code: <form:input path="courseCode"/>
                         <form:errors cssClass="error" path="courseCode"/>
                     </label>
                 </div>
