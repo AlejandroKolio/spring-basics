@@ -17,10 +17,11 @@
 
         <property name="hibernate.connection.CharSet">utf8</property>
         <property name="hibernate.connection.characterEncoding">utf8</property>
-        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.useUnicode">false</property>
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>
+
 
         <!-- Select our SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
