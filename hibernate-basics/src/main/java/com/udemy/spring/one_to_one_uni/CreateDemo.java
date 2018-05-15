@@ -1,7 +1,7 @@
-package com.udemy.spring.one_to_one;
+package com.udemy.spring.one_to_one_uni;
 
-import com.udemy.spring.one_to_one.model.Instructor;
-import com.udemy.spring.one_to_one.model.InstructorDetail;
+import com.udemy.spring.one_to_one_uni.model.Instructor;
+import com.udemy.spring.one_to_one_uni.model.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

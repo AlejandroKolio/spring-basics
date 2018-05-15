@@ -1,6 +1,8 @@
-package com.udemy.spring.one_to_one.model;
+package com.udemy.spring.one_to_one_bi.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -10,7 +12,6 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @Table(name = "instructor_detail")
 public class InstructorDetail {
@@ -26,8 +27,16 @@ public class InstructorDetail {
     @Column(name = "hobby")
     private String hobby;
 
+    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    private Instructor instructor;
+
     public InstructorDetail(String youTubeChannel, String hobby) {
         this.youTubeChannel = youTubeChannel;
         this.hobby = hobby;
+    }
+
+    @Override
+    public String toString() {
+        return "InstructorDetail [id=" + id + ", youtubeChannel=" + youTubeChannel + ", hobby=" + hobby + "]";
     }
 }
