@@ -2,6 +2,7 @@ package com.udemy.spring.one_to_one;
 
 import com.udemy.spring.one_to_one.model.Instructor;
 import com.udemy.spring.one_to_one.model.InstructorDetail;
+import lombok.extern.log4j.Log4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -9,7 +10,8 @@ import org.hibernate.cfg.Configuration;
 /**
  * @author alexander.shakhov on 11.05.2018 13:26
  */
-public class CreateDemo {
+@Log4j
+public class DeleteDemo {
 
     public static void main(String[] args) {
         //create session factory
@@ -23,26 +25,23 @@ public class CreateDemo {
         Session session = factory.getCurrentSession();
 
         try {
-            // 0. Prepare objects.
-            Instructor instructorChad = new Instructor("Chad", "Darby", "darby@luv@code.com");
-            Instructor instructorMadu = new Instructor("Madu", "Picaboo", "madu@luv@code.com");
-            InstructorDetail chadDetail = new InstructorDetail("https://www.luv2code.com/youtube", "coding");
-            InstructorDetail maduDetail = new InstructorDetail("https://www.youtube.com", "guitar");
-
-            // 1. Associate the objects.
-            instructorMadu.setInstructorDetail(maduDetail);
 
             //start transaction
             session.beginTransaction();
-            /*
-            * This will save instructorChad and associated objects
-            * because of CascadeType.ALL.
-            * */
-            System.out.println("Saving Instructor: " + instructorMadu);
-            session.save(instructorMadu);
+
+            Integer instructorId = 1;
+            Instructor instructor = session.get(Instructor.class, instructorId);
+
+            log.info("Instructor: " + instructor.getFirstName() + " " + instructor.getLastName() + " found");
+            if(instructor != null) {
+                log.info("Deleting " + instructor.getId());
+                session.delete(instructor);
+            }
 
             //commit transaction
             session.getTransaction().commit();
+
+            log.info("Done!");
 
         } finally {
             factory.close();
