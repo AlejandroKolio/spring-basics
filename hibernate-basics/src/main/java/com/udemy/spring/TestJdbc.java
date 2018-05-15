@@ -16,15 +16,16 @@ public class TestJdbc {
         *
         * So URL is update with timezone configurations.
         * */
-        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String hbStudentTrackerUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String hb01OneToOneUniUrl = "jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
 
         String user = "hbstudent";
         String pass = "hbstudent";
 
         try {
-            System.out.println("Connecting to database: " + jdbcUrl);
+            System.out.println("Connecting to database: " + hb01OneToOneUniUrl);
 
-            Connection myConn = DriverManager.getConnection(jdbcUrl, user, pass);
+            Connection myConn = DriverManager.getConnection(hb01OneToOneUniUrl, user, pass);
 
             System.out.println("Connection successful!!! " + myConn.getCatalog());
 
