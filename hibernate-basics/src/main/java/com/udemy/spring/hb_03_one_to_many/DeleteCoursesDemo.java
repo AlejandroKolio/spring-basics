@@ -1,8 +1,9 @@
-package com.udemy.spring.one_to_many;
+package com.udemy.spring.hb_03_one_to_many;
 
-import com.udemy.spring.one_to_many.model.Course;
-import com.udemy.spring.one_to_many.model.Instructor;
-import com.udemy.spring.one_to_many.model.InstructorDetail;
+import com.udemy.spring.hb_03_one_to_many.model.Course;
+import com.udemy.spring.hb_03_one_to_many.model.Instructor;
+import com.udemy.spring.hb_03_one_to_many.model.InstructorDetail;
+import lombok.extern.log4j.Log4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,7 +13,8 @@ import org.hibernate.cfg.Configuration;
  * @project spring-basics
  * @description
  */
-public class CreateInstructorDemo {
+@Log4j
+public class DeleteCoursesDemo {
 
     public static void main(String[] args) {
         //create session factory
@@ -26,25 +28,23 @@ public class CreateInstructorDemo {
         //create session
         Session session = factory.getCurrentSession();
 
-        try{
-            //create object
-            Instructor instructor =
-                    new Instructor("Susan", "Public", "susan.public@luv@code.com");
-            InstructorDetail instructorDetail =
-                    new InstructorDetail("https://www.youtube.com", "Video Games");
-
-            // associate the objects
-            instructor.setInstructorDetail(instructorDetail);
+        try {
 
             //start transaction
             session.beginTransaction();
 
-            //save object
-            session.save(instructor);
+            // 1. Get Course from DB
+            Course course = session.get(Course.class, 13);
+
+            // 2. Delete Course
+            log.info("Course: '" + course.getTitle() + "' deleted");
+            session.delete(course);
 
             //commit transaction
             session.getTransaction().commit();
-
+        } catch (Exception e) {
+            session.close();
+            e.printStackTrace();
         } finally {
             factory.close();
         }

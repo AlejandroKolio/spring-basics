@@ -56,7 +56,7 @@ public class FetchJoinDemo {
 
             // close the session
             session.close();
-            log.info("");
+
             log.info("SESSION STATUS: " + session.getSession() + "\n");
 
             // get courses for the instructor

@@ -1,4 +1,4 @@
-package com.udemy.spring.one_to_many.model;
+package com.udemy.spring.hb_04_one_to_many.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

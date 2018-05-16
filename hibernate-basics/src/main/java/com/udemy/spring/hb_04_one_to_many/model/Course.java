@@ -1,18 +1,12 @@
-package com.udemy.spring.one_to_many.model;
+package com.udemy.spring.hb_04_one_to_many.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -33,8 +27,20 @@ public class Course {
     @JoinColumn(name = "instructor_id")
     private Instructor instructor;
 
+    @JoinColumn(name = "course_id")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Review> reviews;
+
     public Course(String title) {
         this.title = title;
+    }
+
+    public void addReview(Review review) {
+        if (reviews == null) {
+            reviews = new ArrayList<>();
+        }
+        reviews.add(review);
+
     }
 
     @Override

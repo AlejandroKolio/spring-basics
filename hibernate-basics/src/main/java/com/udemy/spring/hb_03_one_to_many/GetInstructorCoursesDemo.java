@@ -1,8 +1,8 @@
-package com.udemy.spring.one_to_many;
+package com.udemy.spring.hb_03_one_to_many;
 
-import com.udemy.spring.one_to_many.model.Course;
-import com.udemy.spring.one_to_many.model.Instructor;
-import com.udemy.spring.one_to_many.model.InstructorDetail;
+import com.udemy.spring.hb_03_one_to_many.model.Course;
+import com.udemy.spring.hb_03_one_to_many.model.Instructor;
+import com.udemy.spring.hb_03_one_to_many.model.InstructorDetail;
 import lombok.extern.log4j.Log4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,7 +16,7 @@ import java.util.List;
  * @description
  */
 @Log4j
-public class DeleteCoursesDemo {
+public class GetInstructorCoursesDemo {
 
     public static void main(String[] args) {
         //create session factory
@@ -35,18 +35,16 @@ public class DeleteCoursesDemo {
             //start transaction
             session.beginTransaction();
 
-            // 1. Get Course from DB
-            Course course = session.get(Course.class, 13);
+            // 1. Get Instructor from DB
+            Instructor instructor = session.get(Instructor.class, 1);
 
-            // 2. Delete Course
-            log.info("Course: '" + course.getTitle() + "' deleted");
-            session.delete(course);
+            // 2. Get all the Instructor courses.
+            List<Course> courses = instructor.getCourses();
+            log.info("Courses: " + courses);
 
             //commit transaction
             session.getTransaction().commit();
-        } catch (Exception e) {
-            session.close();
-            e.printStackTrace();
+
         } finally {
             factory.close();
         }
