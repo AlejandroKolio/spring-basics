@@ -1,7 +1,7 @@
-package com.udemy.spring.one_to_one_uni;
+package com.udemy.spring.hb_02_one_to_one_bi;
 
-import com.udemy.spring.one_to_one_uni.model.Instructor;
-import com.udemy.spring.one_to_one_uni.model.InstructorDetail;
+import com.udemy.spring.hb_02_one_to_one_bi.model.Instructor;
+import com.udemy.spring.hb_02_one_to_one_bi.model.InstructorDetail;
 import lombok.extern.log4j.Log4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
  * @author alexander.shakhov on 11.05.2018 13:26
  */
 @Log4j
-public class DeleteDemo {
+public class GetInstructorDetailDemo {
 
     public static void main(String[] args) {
         //create session factory
@@ -25,24 +25,26 @@ public class DeleteDemo {
         Session session = factory.getCurrentSession();
 
         try {
-
-            //start transaction
+            // start a transaction
             session.beginTransaction();
 
-            Integer instructorId = 1;
-            Instructor instructor = session.get(Instructor.class, instructorId);
+            // get the instructor detail object
+            int theId = 2999;
+            InstructorDetail tempInstructorDetail =
+                    session.get(InstructorDetail.class, theId);
 
-            log.info("Instructor: " + instructor.getFirstName() + " " + instructor.getLastName() + " found");
-            if(instructor != null) {
-                log.info("Deleting " + instructor.getId());
-                session.delete(instructor);
-            }
+            // print the instructor detail
+            log.info("tempInstructorDetail: " + tempInstructorDetail);
 
-            //commit transaction
+            // print  the associated instructor
+            log.info("the associated instructor: " + tempInstructorDetail.getInstructor());
+
+            // commit transaction
             session.getTransaction().commit();
 
             log.info("Done!");
-
+        } catch (Exception e) {
+            session.close();
         } finally {
             factory.close();
         }

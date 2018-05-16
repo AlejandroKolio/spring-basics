@@ -1,8 +1,6 @@
-package com.udemy.spring.one_to_one_bi.model;
+package com.udemy.spring.hb_01_one_to_one_uni.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,6 +11,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @Table(name = "instructor")
 public class Instructor {
@@ -39,11 +38,6 @@ public class Instructor {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return "Instructor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-                + ", instructorDetail=" + instructorDetail + "]";
+        this.instructorDetail = instructorDetail;
     }
 }

@@ -1,14 +1,16 @@
-package com.udemy.spring.hb_first_lecture;
+package com.udemy.spring.hb_00_first_lecture;
 
-import com.udemy.spring.hb_first_lecture.entity.Student;
+import com.udemy.spring.hb_00_first_lecture.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
  * @author alexander.shakhov on 11.05.2018 13:26
+ * @project spring-basics
+ * @description
  */
-public class UpdateStudentDemo {
+public class DeleteStudentDemo {
 
     public static void main(String[] args) {
         //create session factory
@@ -21,6 +23,7 @@ public class UpdateStudentDemo {
         Session session = factory.getCurrentSession();
 
         try {
+
             //2. start transaction
             session.beginTransaction();
 
@@ -28,19 +31,18 @@ public class UpdateStudentDemo {
             Integer studentId = 1;
             Student student = session.get(Student.class, studentId);
 
-            //4. We update object.
-            System.out.println("Updating student...");
-            student.setFirstName("Scooby");
+            //4.0 Delete student
+            System.out.println(student.getFirstName() + " " + student.getLastName());
 
-            //5. commit transaction to save it and update in DB
-            session.getTransaction().commit();
+            //4.1
+            //session.delete(student);
+            //4.2
+            session.createQuery("delete from Student where id=2").executeUpdate();
 
 
-            session = factory.getCurrentSession();
-            session.beginTransaction();
 
-            session.createQuery("update Student set email='foo@gmail.com'").executeUpdate();
-
+            //5. commit transaction
+            System.out.println("Done");
             session.getTransaction().commit();
 
         } finally {

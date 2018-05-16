@@ -1,20 +1,17 @@
-package com.udemy.spring.one_to_one_uni.model;
+package com.udemy.spring.hb_00_first_lecture.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
 
 /**
- * @author alexander.shakhov on 15.05.2018 16:51
+ * @author alexander.shakhov on 11.05.2018 13:11
  */
-
+@Data
 @Entity
-@Getter
-@Setter
-@ToString
 @NoArgsConstructor
-@Table(name = "instructor")
-public class Instructor {
+@Table(name = "student")
+public class Student {
 
     @Id
     @Column(name = "id")
@@ -30,14 +27,9 @@ public class Instructor {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "instructor_detail_id")
-    private InstructorDetail instructorDetail;
-
-    public Instructor(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.instructorDetail = instructorDetail;
     }
 }

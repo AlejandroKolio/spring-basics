@@ -1,9 +1,8 @@
-package com.udemy.spring.one_to_one_uni;
+package com.udemy.spring.hb_01_one_to_one_uni;
 
-import com.udemy.spring.one_to_one_uni.model.Instructor;
-import com.udemy.spring.one_to_one_uni.model.InstructorDetail;
+import com.udemy.spring.hb_01_one_to_one_uni.model.Instructor;
+import com.udemy.spring.hb_01_one_to_one_uni.model.InstructorDetail;
 import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

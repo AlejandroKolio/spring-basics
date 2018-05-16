@@ -1,4 +1,4 @@
-package com.udemy.spring.one_to_one_bi.model;
+package com.udemy.spring.hb_02_one_to_one_bi.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

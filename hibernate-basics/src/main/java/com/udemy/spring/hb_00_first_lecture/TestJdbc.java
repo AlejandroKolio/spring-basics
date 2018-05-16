@@ -1,4 +1,4 @@
-package com.udemy.spring.hb_first_lecture;
+package com.udemy.spring.hb_00_first_lecture;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

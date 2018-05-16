@@ -1,4 +1,4 @@
-package com.udemy.spring.one_to_one_uni.model;
+package com.udemy.spring.hb_01_one_to_one_uni.model;
 
 import lombok.*;
 
