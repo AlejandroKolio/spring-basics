@@ -11,7 +11,7 @@
         <!--
         In order to input '&' in xml and avoid 'unescaped or non terminated character' use &amp; described in this solution (below link).
         https://stackoverflow.com/questions/33269480/how-to-place-in-xml-strings-file-in-android-studio-->
-        <property name="connection.url">jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hb-03-one-to-many?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false</property>
         <property name="connection.username">hbstudent</property>
         <property name="connection.password">hbstudent</property>
 

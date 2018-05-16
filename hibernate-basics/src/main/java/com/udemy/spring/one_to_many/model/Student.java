@@ -1,6 +1,7 @@
-package com.udemy.spring.entity;
+package com.udemy.spring.one_to_many.model;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
