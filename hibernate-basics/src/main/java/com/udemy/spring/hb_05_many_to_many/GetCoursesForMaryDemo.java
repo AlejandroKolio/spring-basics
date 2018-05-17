@@ -29,12 +29,11 @@ public class GetCoursesForMaryDemo {
         Session session = factory.getCurrentSession();
 
         try {
-
             // start a transaction
             session.beginTransaction();
 
             // get the student from database
-            int studentId = 4;
+            int studentId = 2;
             Student tempStudent = session.get(Student.class, studentId);
 
             log.info("\nLOADED STUDENT: " + tempStudent);
@@ -46,6 +45,8 @@ public class GetCoursesForMaryDemo {
             log.info("Done!");
         } catch (Exception e) {
             session.close();
+            log.error("ERROR: " + e.getMessage());
+            e.printStackTrace();
         } finally {
 
             // add clean up code

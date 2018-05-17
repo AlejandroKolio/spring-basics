@@ -53,8 +53,11 @@ public class CreateCourseAndReviewsDemo {
 			session.getTransaction().commit();
 			
 			log.info("DONE!");
-		}
-		finally {
+		} catch (Exception e) {
+			session.close();
+			log.error("ERROR: " + e.getMessage());
+			e.printStackTrace();
+		} finally {
 			
 			// add clean up code
 			session.close();

@@ -34,32 +34,35 @@ public class AddCoursesForMaryDemo {
 			session.beginTransaction();
 				
 			// get the student mary from database
-			int studentId = 4;
+			int studentId = 2;
 			Student student = session.get(Student.class, studentId);
 
 			log.info("\nLOADED STUDENT: " + student);
 			log.info("COURSES: " + student.getCourses());
 			
 			// create more courses 
-			Course course = new Course("Rubik's Cube - How to Speed Cube");
-			Course tempCourse2 = new Course("Atari 2600 - Game Development");
+			Course course1 = new Course("Rubik's Cube - How to Speed Cube");
+			Course course2 = new Course("Atari 2600 - Game Development");
 						
 			// add student to courses
-			course.addStudent(student);
-			tempCourse2.addStudent(student);
+			course1.addStudent(student);
+			course2.addStudent(student);
 						
 			// save the courses
 			log.info("\nSAVING THE COURSES ...");
 			
-			session.save(course);
-			session.save(tempCourse2);
+			session.save(course1);
+			session.save(course2);
 						
 			// commit transaction
 			session.getTransaction().commit();
 
 			log.info("DONE!");
-		}
-		finally {
+		} catch (Exception e) {
+			session.close();
+			log.error("ERROR: " + e.getMessage());
+			e.printStackTrace();
+		} finally {
 			
 			// add clean up code
 			session.close();

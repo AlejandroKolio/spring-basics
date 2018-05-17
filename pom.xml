@@ -15,6 +15,7 @@
         <module>spring-core</module>
         <module>spring-mvc</module>
         <module>hibernate-basics</module>
+        <module>web-customer-tracker</module>
     </modules>
 
     <properties>
@@ -52,7 +53,13 @@
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
     <build>
