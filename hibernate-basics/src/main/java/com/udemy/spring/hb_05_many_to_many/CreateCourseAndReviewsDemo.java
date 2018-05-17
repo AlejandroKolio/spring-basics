@@ -32,8 +32,7 @@ public class CreateCourseAndReviewsDemo {
 			
 			// start a transaction
 			session.beginTransaction();
-			
-			
+
 			// create a course
 			Course course = new Course("Pacman - How To Score One Million Points");
 			
@@ -58,10 +57,8 @@ public class CreateCourseAndReviewsDemo {
 			log.error("ERROR: " + e.getMessage());
 			e.printStackTrace();
 		} finally {
-			
 			// add clean up code
 			session.close();
-			
 			factory.close();
 		}
 	}

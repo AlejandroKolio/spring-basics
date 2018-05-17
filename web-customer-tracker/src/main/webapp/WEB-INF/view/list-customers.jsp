@@ -17,6 +17,9 @@
 <div id="wrapper">
     <div id="header">
         <h3>CRM - Customer Relationship Manager</h3>
+        <link type="text/css"
+              rel="stylesheet"
+              href="${pageContext.request.contextPath}/assets/css/style.css" />
     </div>
 </div>
 
