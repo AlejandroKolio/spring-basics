@@ -43,6 +43,12 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<!-- c3p0 for Connection Pool -->
 		<dependency>
 			<groupId>c3p0</groupId>
