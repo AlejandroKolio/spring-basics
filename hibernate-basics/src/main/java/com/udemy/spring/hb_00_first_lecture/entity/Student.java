@@ -1,6 +1,7 @@
 package com.udemy.spring.hb_00_first_lecture.entity;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 

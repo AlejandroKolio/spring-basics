@@ -16,9 +16,8 @@ public class QueryStudentDemo {
 
     public static void main(String[] args) {
         //create session factory
-        SessionFactory factory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Student.class)
+        SessionFactory factory =
+            new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         //create session
@@ -33,19 +32,24 @@ public class QueryStudentDemo {
             System.out.println("Display students");
 
             //2.1 All the Students
-            List<Student> listOfAllStudents          = session.createQuery("from Student").getResultList();
+            List<Student> listOfAllStudents = session.createQuery("from Student").getResultList();
             displayStudent(listOfAllStudents);
 
             //2.2 Last Name Doe
-            List<Student> listStudentWithDoeLastName = session.createQuery("from Student s where s.lastName='Doe'").getResultList();
+            List<Student> listStudentWithDoeLastName =
+                session.createQuery("from Student s where s.lastName='Doe'").getResultList();
             displayStudent(listStudentWithDoeLastName);
 
             //2.3 Last Name Doe or Name Daffy
-            List<Student> doeOrDuffy                 = session.createQuery("from Student s where s.lastName='Doe' or s.firstName='Daffy'").getResultList();
+            List<Student> doeOrDuffy =
+                session.createQuery("from Student s where s.lastName='Doe' or s.firstName='Daffy'")
+                    .getResultList();
             displayStudent(doeOrDuffy);
 
             //2.4 Email LIKE luv2code.com
-            List<Student> emailList                  = session.createQuery("from Student s where s.email like '%luv2code.com'").getResultList();
+            List<Student> emailList =
+                session.createQuery("from Student s where s.email like '%luv2code.com'")
+                    .getResultList();
             displayStudent(emailList);
 
             //3. Commit transaction.

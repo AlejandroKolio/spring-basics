@@ -10,14 +10,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-/**
- * @author alexander.shakhov on 11.05.2018 13:26
- */
 @Log4j
-public class CreateCoursesAndStudentsDemo {
+public class GetCoursesForMaryDemo {
 
     public static void main(String[] args) {
-        //create session factory
+
+        // create session factory
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
@@ -27,44 +25,39 @@ public class CreateCoursesAndStudentsDemo {
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
-        //create session
+        // create session
         Session session = factory.getCurrentSession();
 
         try {
-            //start transaction
+
+            // start a transaction
             session.beginTransaction();
 
-            // 0. Create Course
-            Course course = new Course("Pacman - How to score one million points");
+            // get the student from database
+            int studentId = 4;
+            Student tempStudent = session.get(Student.class, studentId);
 
-            log.info("SAVING COURSE: " + course);
-            session.save(course);
+            log.info("\nLOADED STUDENT: " + tempStudent);
+            log.info("COURSES: " + tempStudent.getCourses());
 
-            // 1. Create Student
-            Student john = new Student("John", "Doe", "joh,doe@luv2code.com");
-            Student mary = new Student("Mary", "Public", "mary,public@luv2code.com");
-
-            // 2. Add Students to the Course
-            course.addStudent(john);
-            course.addStudent(mary);
-
-            // 3. Save the Students
-            log.info("SAVING THE STUDENT: " + john);
-            session.save(john);
-            log.info("SAVING THE STUDENT: " + mary);
-            session.save(mary);
-
-            // 4. Get All Saved Students.
-            log.info("SAVED STUDENTS: " + course.getStudents());
-
-            //commit transaction
+            // commit transaction
             session.getTransaction().commit();
+
+            log.info("Done!");
         } catch (Exception e) {
             session.close();
-            log.error("ERROR: " + e.getMessage());
-            e.printStackTrace();
         } finally {
+
+            // add clean up code
+            session.close();
+
             factory.close();
         }
     }
+
 }
+
+
+
+
+

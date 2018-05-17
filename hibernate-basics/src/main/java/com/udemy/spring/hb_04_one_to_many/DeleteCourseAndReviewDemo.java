@@ -33,7 +33,7 @@ public class DeleteCourseAndReviewDemo {
             session.beginTransaction();
 
             // 1. Get Course with id 1
-            Course course = session.get(Course.class, 10);
+            Course course = session.get(Course.class, 13);
 
             log.info("DELETE COURSE: " + course);
             session.delete(course);

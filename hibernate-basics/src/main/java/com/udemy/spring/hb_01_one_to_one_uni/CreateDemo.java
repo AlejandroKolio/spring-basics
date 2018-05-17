@@ -38,9 +38,9 @@ public class CreateDemo {
             //start transaction
             session.beginTransaction();
             /*
-            * This will save instructorChad and associated objects
-            * because of CascadeType.ALL.
-            * */
+             * This will save instructorChad and associated objects
+             * because of CascadeType.ALL.
+             * */
             log.info("Saving Instructor: " + instructorMadu);
             log.info("Saving Instructor: " + chadDetail);
             session.save(instructorMadu);

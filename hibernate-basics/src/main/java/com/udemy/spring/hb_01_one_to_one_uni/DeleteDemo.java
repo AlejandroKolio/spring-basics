@@ -33,7 +33,7 @@ public class DeleteDemo {
             Instructor instructor = session.get(Instructor.class, instructorId);
 
             log.info("Instructor: " + instructor.getFirstName() + " " + instructor.getLastName() + " found");
-            if(instructor != null) {
+            if (instructor != null) {
                 log.info("Deleting " + instructor.getId());
                 session.delete(instructor);
             }

@@ -1,6 +1,9 @@
 package com.udemy.spring.hb_01_one_to_one_uni.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -38,6 +41,5 @@ public class Instructor {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.instructorDetail = instructorDetail;
     }
 }
