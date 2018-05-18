@@ -52,18 +52,6 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-        <!-- jstl -->
-<!--    <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>
-        &lt;!&ndash;jstl-api&ndash;&gt;
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>jstl-api</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>-->
         <!--commons-logging-->
         <dependency>
             <groupId>commons-logging</groupId>
@@ -77,14 +65,5 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
-
-    <build>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-            <plugins>
-            </plugins>
-        </pluginManagement>
-    </build>
 </project>

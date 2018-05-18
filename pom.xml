@@ -16,7 +16,8 @@
         <module>spring-mvc</module>
         <module>hibernate-basics</module>
         <module>web-customer-tracker</module>
-    </modules>
+		<module>spring-aop</module>
+	</modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
