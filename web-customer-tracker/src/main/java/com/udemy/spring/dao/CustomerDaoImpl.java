@@ -53,4 +53,25 @@ public class CustomerDaoImpl implements CustomerDao {
 
         query.executeUpdate();
     }
+
+    @Override
+    public List<Customer> searchCustomers(String searchName) {
+        Session session = sessionFactory.getCurrentSession();
+
+        Query<Customer> query =
+                session.createQuery("from Customer where lower(firstName) like :name or lower(lastName) like :name", Customer.class);
+
+        // check to search by name if theSearchName is not empty
+        if (searchName != null && searchName.trim().length() > 0) {
+            query.setParameter("name", "%" + searchName.toLowerCase() + "%");
+        } else {
+            // theSearchName is empty ... so just get all customers
+            query = session.createQuery("from Customer", Customer.class);
+        }
+
+        // execute query and get result list
+        List<Customer> customers = query.getResultList();
+
+        return customers;
+    }
 }

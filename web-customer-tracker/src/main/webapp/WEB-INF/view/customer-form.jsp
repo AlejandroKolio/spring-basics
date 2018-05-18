@@ -23,7 +23,6 @@
     <div id="container">
         <h4>Save Customer</h4>
         <form:form action="saveCustomer" modelAttribute="customer" method="post">
-
             <!-- need to associate this data with customer id -->
             <form:hidden path="id" />
 
