@@ -1,13 +1,15 @@
-package com.udemy.spring.dao;
+package com.udemy.spring.service;
 
 import com.udemy.spring.entity.Customer;
 
 import java.util.List;
 
 /**
- * @author alexander.shakhov on 17.05.2018 17:02
+ * @author alexander.shakhov on 18.05.2018 11:01
+ * @project spring-basics
+ * @description
  */
-public interface CustomerDao {
+public interface CustomerService {
 
     List<Customer> getCustomers();
 
