@@ -10,51 +10,60 @@
 <html>
 <head>
     <title>Customer Form</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/add-customer-style.css">
+    <%--    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+        <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/add-customer-style.css">--%>
 </head>
 <body>
-<div id="wrapper">
-    <div id="header">
-        <h3>CRM - Customer Relationship Manager</h3>
-    </div>
+<div class="container bg-dark">
+    <div class="row justify-content-md-center">
+        <div class="pos-f-t">
+            <h3 class="col-md-auto text-lg-center text-light">Save Customer Form
+                <span class="badge badge-secondary">CRUD</span></h3>
 
-    <div id="container">
-        <h4>Save Customer</h4>
-        <form:form action="saveCustomer" modelAttribute="customer" method="post">
-            <!-- need to associate this data with customer id -->
-            <form:hidden path="id" />
-
-            <table>
-                <tbody>
-                <tr>
-                    <td><label>First Name:</label></td>
-                    <td><form:input path="firstName"/></td>
-                </tr>
-                <tr>
-                    <td><label>Last Name:</label></td>
-                    <td><form:input path="lastName"/></td>
-                </tr>
-                <tr>
-                    <td><label>Email:</label></td>
-                    <td><form:input path="email"/></td>
-                </tr>
-                <br>
-                <tr>
-                    <td><label></label></td>
-                    <td><input type="submit" value="Save"/></td>
-                </tr>
-                </tbody>
-            </table>
-        </form:form>
-
-        <div style="clear; both;"></div>
-        <p>
-            <a href="${pageContext.request.contextPath}/customer/list">Go Back</a>
-        </p>
+        </div>
     </div>
 </div>
 
+<div class="container">
+    <form:form action="saveCustomer" modelAttribute="customer" method="post">
+        <!-- need to associate this data with customer id -->
+        <form:hidden path="id"/>
+        <div class="form-row">
+            <div class="form-group col-md-7">
+                <label>First Name</label>
+                <form:input cssClass="form-control" path="firstName" placeholder="First Name"/>
+            </div>
+            <div class="form-group col-md-7">
+                <label>Last Name</label>
+                <form:input cssClass="form-control" path="lastName" placeholder="Last Name"/>
+            </div>
+            <div class="form-group col-md-7">
+                <label>Email</label>
+                <form:input cssClass="form-control" path="email" placeholder="Email"/>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Save">Save
+        </button>
+        <button type="button" class="btn btn-outline-primary"><a
+                href="${pageContext.request.contextPath}/customer/list">Go Back</a></button>
+    </form:form>
+</div>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 </body>
 </html>
