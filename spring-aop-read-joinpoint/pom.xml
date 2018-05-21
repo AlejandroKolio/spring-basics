@@ -10,9 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.udemy.spring.spring-aop-read-joinpoint</artifactId>
+    <artifactId>spring-aop-read-joinpoint</artifactId>
 
-    <name>com.udemy.spring.spring-aop-read-joinpoint</name>
+    <name>spring-aop-read-joinpoint</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

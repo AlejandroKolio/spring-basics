@@ -23,6 +23,7 @@
         <module>spring-aop-read-joinpoint</module>
         <module>spring-aop-z-afterreturning</module>
         <module>spring-aop-afterthrowing</module>
+        <module>spring-aop-after-finally</module>
     </modules>
 
 

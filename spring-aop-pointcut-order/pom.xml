@@ -10,9 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.udemy.spring.spring-aop-pointcut-order</artifactId>
+    <artifactId>spring-aop-pointcut-order</artifactId>
 
-    <name>com.udemy.spring.spring-aop-pointcut-order</name>
+    <name>spring-aop-pointcut-order</name>
 
 
     <properties>
