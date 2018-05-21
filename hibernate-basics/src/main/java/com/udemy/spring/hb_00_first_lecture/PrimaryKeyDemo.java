@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 /**
  * @author alexander.shakhov on 14.05.2018 12:00
- * @project spring-basics
+ * @project com.udemy.spring.spring-basics
  * @description
  */
 public class PrimaryKeyDemo {

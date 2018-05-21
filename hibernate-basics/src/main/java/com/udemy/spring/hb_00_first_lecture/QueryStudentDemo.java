@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @author alexander.shakhov on 11.05.2018 13:26
- * @project spring-basics
+ * @project com.udemy.spring.spring-basics
  * @description
  */
 public class QueryStudentDemo {

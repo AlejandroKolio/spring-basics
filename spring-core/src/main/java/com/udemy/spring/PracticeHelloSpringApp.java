@@ -7,11 +7,11 @@ public class PracticeHelloSpringApp {
 
 	public static void main(String[] args) {
 
-		// load the spring configuration file
+		// load the com.udemy.spring.spring configuration file
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(ConfigurationApp.class);
 				
-		// get the bean from spring container
+		// get the bean from com.udemy.spring.spring container
 		FootballCoach theCoach = context.getBean("footballCoach", FootballCoach.class);
 
 		// call a method on the bean

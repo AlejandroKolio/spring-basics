@@ -12,14 +12,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainApp {
 	public static void main(String[] args) {
 
-		// read spring config java class
+		// read com.udemy.spring.spring config java class
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(ConfigAop.class);
 
-		// get the bean from spring container
+		// get the bean from com.udemy.spring.spring container
 		AccountDao theAccountDAO = context.getBean("accountDao", AccountDao.class);
 
-		// get membership bean from spring container
+		// get membership bean from com.udemy.spring.spring container
 		MembershipDao theMembershipDAO =
 				context.getBean("membershipDao", MembershipDao.class);
 

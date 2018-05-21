@@ -3,18 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/beans/com.udemy.spring.spring-beans.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/context/com.udemy.spring.spring-context.xsd">
 
     <!-- Define your beans here -->
 
     <!-- define the dependency -->
     <!--<bean id="myFortuneService"
-          class="com.udemy.spring.service.RandomFortuneService">
+          class="com.udemy.com.udemy.spring.spring.service.RandomFortuneService">
     </bean>
 
-    <bean id="myGolfCoach" class="com.udemy.spring.model.GolfCoach" scope="prototype">
+    <bean id="myGolfCoach" class="com.udemy.com.udemy.spring.spring.model.GolfCoach" scope="prototype">
         &lt;!&ndash; set up constructor injection &ndash;&gt;
         <constructor-arg ref="myFortuneService"/>
     </bean>-->

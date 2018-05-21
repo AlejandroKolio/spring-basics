@@ -13,7 +13,7 @@ import java.util.Random;
 
 /**
  * @author alexander.shakhov on 04.05.2018 15:14
- * @project spring-framework-course
+ * @project com.udemy.spring.spring-framework-course
  * @description
  */
 @Component

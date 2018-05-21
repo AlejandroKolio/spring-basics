@@ -13,7 +13,7 @@ public class LoggingAspect {
 
 	//@Before("execution(public void *Account())")
 
-	//@Before("execution(* add*(com.udemy.spring.model.Account, ..))")
+	//@Before("execution(* add*(com.udemy.com.udemy.spring.spring.model.Account, ..))")
 
 	@Before("execution(* com.udemy.spring.dao.*.*(..))")
 	public void beforeAddAccountAdvice(){

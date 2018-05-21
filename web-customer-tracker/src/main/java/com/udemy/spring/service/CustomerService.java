@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @author alexander.shakhov on 18.05.2018 11:01
- * @project spring-basics
+ * @project com.udemy.spring.spring-basics
  * @description
  */
 public interface CustomerService {

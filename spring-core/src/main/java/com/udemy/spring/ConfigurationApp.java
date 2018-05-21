@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author alexander.shakhov on 04.05.2018 18:10
- * @project spring-framework-course
+ * @project com.udemy.spring.spring-framework-course
  * @description
  */
 @Configuration

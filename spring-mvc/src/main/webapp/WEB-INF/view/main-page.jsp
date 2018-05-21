@@ -25,7 +25,7 @@
 
 <br><br>
 
-<img src="${pageContext.request.contextPath}/assets/img/spring-logo.png" />
+<img src="${pageContext.request.contextPath}/assets/img/com.udemy.spring.spring-logo.png" />
 
 <br><br>
 

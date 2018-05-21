@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
 
-    // Need to inject SessionFactory (from spring-mvc-crud-demo-servlet.xml) bean.
+    // Need to inject SessionFactory (from com.udemy.spring.spring-mvc-crud-demo-servlet.xml) bean.
     @Autowired
     private SessionFactory sessionFactory;
 

@@ -10,14 +10,14 @@ public class MainDemoApp {
 
 	public static void main(String[] args) {
 
-		// read spring config java class
+		// read com.udemy.spring.spring config java class
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(ConfigApp.class);
 		
-		// get the bean from spring container
+		// get the bean from com.udemy.spring.spring container
 		AccountDao accountDao = context.getBean("accountDao", AccountDao.class);
 		
-		// get membership bean from spring container
+		// get membership bean from com.udemy.spring.spring container
 		MembershipDao membershipDao =
 				context.getBean("membershipDao", MembershipDao.class);
 				
