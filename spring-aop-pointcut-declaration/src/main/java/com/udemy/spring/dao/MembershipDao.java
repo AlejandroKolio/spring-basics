@@ -1,5 +1,6 @@
 package com.udemy.spring.dao;
 
+import com.udemy.spring.model.Account;
 import org.springframework.stereotype.Component;
 
 /**

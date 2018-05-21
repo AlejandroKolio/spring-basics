@@ -3,6 +3,7 @@ package com.udemy.spring;
 import com.udemy.spring.config.ConfigAop;
 import com.udemy.spring.dao.AccountDao;
 import com.udemy.spring.dao.MembershipDao;
+import com.udemy.spring.model.Account;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -16,8 +17,13 @@ public class MainApp {
 		AccountDao accountDao 		= context.getBean("accountDao", AccountDao.class);
 		MembershipDao membershipDao = context.getBean("membershipDao", MembershipDao.class);
 
-		accountDao.addAccount();
-		membershipDao.addAccount();
+		//business logic
+		accountDao.addAccount(new Account(), true);
+		accountDao.doWork();
+
+		//business logic
+		membershipDao.addSillyAccount();
+		membershipDao.goToSleep();
 
 		context.close();
 	}

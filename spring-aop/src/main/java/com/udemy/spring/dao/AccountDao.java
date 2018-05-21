@@ -1,5 +1,6 @@
 package com.udemy.spring.dao;
 
+import com.udemy.spring.model.Account;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +9,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class AccountDao {
 
-	public void addAccount() {
+	public void addAccount(Account account, boolean flag) {
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AND ACCOUNT");
+	}
+
+	public boolean doWork() {
+
+		System.out.println(getClass() + ": doWork()");
+		return false;
 	}
 }

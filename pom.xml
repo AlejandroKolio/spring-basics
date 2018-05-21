@@ -17,7 +17,10 @@
         <module>hibernate-basics</module>
         <module>web-customer-tracker</module>
 		<module>spring-aop</module>
-	</modules>
+        <module>spring-aop-pointcut-declaration</module>
+        <module>spring-aop-pointcut-order</module>
+        <module>spring-aop-read-joinpoint</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

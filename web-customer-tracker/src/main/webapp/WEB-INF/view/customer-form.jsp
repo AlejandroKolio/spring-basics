@@ -22,39 +22,38 @@
         <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/add-customer-style.css">--%>
 </head>
 <body>
-<div class="container bg-dark">
-    <div class="row justify-content-md-center">
-        <div class="pos-f-t">
+<div class="container bg-dark col-sm-6">
+    <div class="row justify-content-md-center col-sm-6">
             <h3 class="col-md-auto text-lg-center text-light">Save Customer Form
                 <span class="badge badge-secondary">CRUD</span></h3>
-
-        </div>
     </div>
 </div>
 
-<div class="container">
-    <form:form action="saveCustomer" modelAttribute="customer" method="post">
-        <!-- need to associate this data with customer id -->
-        <form:hidden path="id"/>
-        <div class="form-row">
-            <div class="form-group col-md-7">
-                <label>First Name</label>
-                <form:input cssClass="form-control" path="firstName" placeholder="First Name"/>
+<div class="container col-sm-6">
+    <div class="row justify-content-lg-start bg-light">
+        <form:form action="saveCustomer" modelAttribute="customer" method="post">
+            <!-- need to associate this data with customer id -->
+            <form:hidden path="id"/>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label>First Name</label>
+                    <form:input cssClass="form-control" path="firstName" placeholder="First Name"/>
+                </div>
+                <div class="form-group col-md-7">
+                    <label>Last Name</label>
+                    <form:input cssClass="form-control" path="lastName" placeholder="Last Name"/>
+                </div>
+                <div class="form-group col-md-7">
+                    <label>Email</label>
+                    <form:input cssClass="form-control" path="email" placeholder="Email"/>
+                </div>
             </div>
-            <div class="form-group col-md-7">
-                <label>Last Name</label>
-                <form:input cssClass="form-control" path="lastName" placeholder="Last Name"/>
-            </div>
-            <div class="form-group col-md-7">
-                <label>Email</label>
-                <form:input cssClass="form-control" path="email" placeholder="Email"/>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Save">Save
-        </button>
-        <button type="button" class="btn btn-outline-primary"><a
-                href="${pageContext.request.contextPath}/customer/list">Go Back</a></button>
-    </form:form>
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Save">Save
+            </button>
+            <button type="button" class="btn btn-outline-primary"><a
+                    href="${pageContext.request.contextPath}/customer/list">Go Back</a></button>
+        </form:form>
+    </div>
 </div>
 
 
