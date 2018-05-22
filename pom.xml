@@ -25,7 +25,9 @@
         <module>spring-aop-afterthrowing</module>
         <module>spring-aop-after-finally</module>
 		<module>spring-aop-around</module>
-	</modules>
+        <module>spring-aop-around-with-logger</module>
+        <module>spring-aop-around-handle-exception</module>
+    </modules>
 
 
     <properties>
