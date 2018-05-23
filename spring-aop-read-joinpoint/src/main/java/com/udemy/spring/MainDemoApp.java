@@ -1,6 +1,6 @@
 package com.udemy.spring;
 
-import com.udemy.spring.config.ConfigApp;
+import com.udemy.spring.configuration.ConfigApp;
 import com.udemy.spring.dao.AccountDao;
 import com.udemy.spring.dao.MembershipDao;
 import com.udemy.spring.model.Account;
@@ -10,7 +10,7 @@ public class MainDemoApp {
 
     public static void main(String[] args) {
 
-        // read com.udemy.spring.spring config java class
+        // read com.udemy.spring.spring configuration java class
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(ConfigApp.class);
 

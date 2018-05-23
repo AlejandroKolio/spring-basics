@@ -1,6 +1,6 @@
 package com.udemy.spring;
 
-import com.udemy.spring.config.ConfigApp;
+import com.udemy.spring.configuration.ConfigApp;
 import com.udemy.spring.dao.AccountDao;
 import com.udemy.spring.model.Account;
 import java.util.List;

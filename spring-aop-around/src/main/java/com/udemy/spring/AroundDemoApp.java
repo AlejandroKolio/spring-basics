@@ -1,18 +1,14 @@
 package com.udemy.spring;
 
-import com.udemy.spring.config.ConfigApp;
-import com.udemy.spring.dao.AccountDao;
-import com.udemy.spring.model.Account;
+import com.udemy.spring.configuration.ConfigApp;
 import com.udemy.spring.service.TrafficFortuneService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.List;
 
 public class AroundDemoApp {
 
 	public static void main(String[] args) {
 
-		// read spring config java class
+		// read spring configuration java class
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(ConfigApp.class);
 
