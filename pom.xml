@@ -30,7 +30,8 @@
         <module>spring-security</module>
         <module>spring-security-basics</module>
         <module>spring-security-custom-login-form</module>
-    </modules>
+		<module>spring-security-bootstrap-login-form</module>
+	</modules>
 
 
     <properties>
