@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.User;
  */
 @Configuration
 @EnableWebSecurity
-public class SecurityConfigAdapter extends WebSecurityConfigurerAdapter {
+public class DemoSecurityConfigApplication extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {

@@ -29,6 +29,7 @@
         <module>spring-aop-around-handle-exception</module>
         <module>spring-security</module>
         <module>spring-security-basics</module>
+        <module>spring-security-custom-login-form</module>
     </modules>
 
 
