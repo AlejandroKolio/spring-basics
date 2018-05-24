@@ -9,23 +9,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
     <title>Home</title>
 </head>
 <body class="bg-dark text-center">
-
-<h4 class="h3 mb-3 font-weight-normal text-light">We're glad to see you, <sec:authentication property="principal.username"/></h4>
-<h4 class="h3 mb-3 font-weight-normal text-light">Your role(s): <sec:authentication property="principal.authorities"/></h4>
-
 <div class="container">
     <div class="py-5 text-center">
+
+
+
+        <h4 class="h3 mb-3 font-weight-normal text-light">We're glad to see you, <sec:authentication property="principal.username"/></h4>
+        <h4 class="h3 mb-3 font-weight-normal text-light">Your role(s): <sec:authentication property="principal.authorities"/></h4>
+        <!-- Add a link to point to /leaders ... this is for the managers -->
+        <hr class="bg-light">
+        <p>
+            <sec:authorize access="hasRole('MANAGER')">
+                <a class="font-weight-normal text-light" href="${pageContext.request.contextPath}/leaders">Leadership Meeting (Only for Manager peeps)</a>
+                <br>
+            </sec:authorize>
+
+            <sec:authorize access="hasRole('ADMIN')">
+                <a class="font-weight-normal text-light" href="${pageContext.request.contextPath}/systems">IT Systems Meeting (Only for Admins  peeps)</a>
+                <br>
+            </sec:authorize>
+
+        </p>
         <form:form action="${pageContext.request.contextPath}/logout" method="post">
-            <input type="submit" value="Logout"/>
+            <button type="submit" class="btn btn-outline-warning">Logout</button>
         </form:form>
     </div>
 </div>
-
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
