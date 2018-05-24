@@ -13,15 +13,15 @@
 </head>
 <body>
 
-<p>The student is confirmed: ${user.firstName} ${user.lastName} </p>
+<p>The student is confirmed: ${account.firstName} ${account.lastName} </p>
 <br>
-<p>The student country is:   ${user.country} </p>
+<p>The student country is:   ${account.country} </p>
 <br>
-<p>The student program language is:   ${user.programmingLanguage} </p>
+<p>The student program language is:   ${account.programmingLanguage} </p>
 <br>
 <p>Operating Systems</p>
 <ul>
-    <c:forEach var="os" items="${user.operatingSystems}">
+    <c:forEach var="os" items="${account.operatingSystems}">
         <li>${os}</li>
     </c:forEach>
 </ul>

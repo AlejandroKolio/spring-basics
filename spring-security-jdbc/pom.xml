@@ -47,6 +47,12 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
+		<!--hibernate-validator-->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.9.Final</version>
+		</dependency>
 
 		<!-- Servlet, JSP and JSTL support -->
 		<!-- servlet-api -->

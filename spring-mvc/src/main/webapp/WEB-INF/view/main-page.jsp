@@ -18,7 +18,7 @@
 
 <a href="hello/showForm">Plain Hello World</a>
 <br>
-<a href="user/showForm">User Form</a>
+<a href="account/showForm">User Form</a>
 <br>
 <a href="customer/showCustomerForm">Customer Form</a>
 <br>

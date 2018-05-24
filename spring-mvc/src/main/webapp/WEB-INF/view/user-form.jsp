@@ -12,7 +12,7 @@
     <title>User Registration Form</title>
 </head>
 <body>
-<form:form action="processForm" modelAttribute="user">
+<form:form action="processForm" modelAttribute="account">
     First Name: <form:input path="firstName"/>
     <br>
     Last Name: <form:input path="lastName"/>
@@ -20,7 +20,7 @@
     Country:
     <br>
     <form:select path="country">
-        <form:options items="${user.countries}"/>
+        <form:options items="${account.countries}"/>
     </form:select>
     <br>
     Language:

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: alexander.shakhov
+  Account: alexander.shakhov
   Date: 23.05.2018
   Time: 17:31
   To change this template use File | Settings | File Templates.
@@ -47,7 +47,17 @@
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+
 </form:form>
+
+<div>
+    <a href="${pageContext.request.contextPath}/register/showRegistrationForm"
+       class="btn btn-lg btn-secondary btn-block"
+       role="button" aria-pressed="true">
+        Sign Up
+    </a>
+</div>
+
 </body>
 </html>

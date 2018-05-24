@@ -39,7 +39,7 @@
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
         <property name="jdbcUrl"
                   value="jdbc:mysql://localhost:3306/web_customer_tracker?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"/>
-        <property name="user" value="springstudent"/>
+        <property name="account" value="springstudent"/>
         <property name="password" value="springstudent"/>
 
         <!-- these are connection pool properties for C3P0 -->
