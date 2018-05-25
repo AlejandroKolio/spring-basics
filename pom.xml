@@ -31,8 +31,9 @@
         <module>spring-security-basics</module>
         <module>spring-security-custom-login-form</module>
 		<module>spring-security-bootstrap-login-form</module>
-		<module>spring-security-account-roles</module>
+		<module>spring-security-user-roles</module>
 		<module>spring-security-jdbc</module>
+		<module>spring-rest-json-data-binding</module>
 	</modules>
 
 
