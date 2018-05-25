@@ -34,7 +34,8 @@
 		<module>spring-security-user-roles</module>
 		<module>spring-security-jdbc</module>
 		<module>spring-rest-json-data-binding</module>
-	</modules>
+        <module>spring-rest-mvc</module>
+    </modules>
 
 
     <properties>
