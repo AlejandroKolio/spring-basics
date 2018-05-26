@@ -9,10 +9,10 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>spring-security-account-roles</artifactId>
+	<artifactId>spring-security-user-roles</artifactId>
 	<packaging>war</packaging>
 
-	<name>spring-security-account-roles</name>
+	<name>spring-security-user-roles</name>
 
 	<properties>
 		<springframework.version>5.0.6.RELEASE</springframework.version>
@@ -76,7 +76,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>spring-security-account-roles</finalName>
+		<finalName>spring-security-user-roles</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>

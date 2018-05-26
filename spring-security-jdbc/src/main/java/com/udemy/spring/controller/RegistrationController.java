@@ -41,7 +41,7 @@ public class RegistrationController {
 
 	@GetMapping("/showRegistrationForm")
 	public String showMyLoginPage(Model theModel) {
-		theModel.addAttribute("crmUser", new Account());
+		theModel.addAttribute("user", new Account());
 
 		return "registration-form";
 	}
@@ -55,7 +55,7 @@ public class RegistrationController {
 
 		// form validation
 		if (theBindingResult.hasErrors()) {
-			theModel.addAttribute("crmUser", new Account());
+			theModel.addAttribute("user", new Account());
 			theModel.addAttribute("registrationError", "Account name/password can not be empty.");
 
 			logger.warning("Account name/password can not be empty.");
@@ -67,18 +67,13 @@ public class RegistrationController {
 		boolean userExists = doesUserExist(userName);
 
 		if (userExists) {
-			theModel.addAttribute("crmUser", new Account());
+			theModel.addAttribute("user", new Account());
 			theModel.addAttribute("registrationError", "Account name already exists.");
 
 			logger.warning("Account name already exists.");
 
 			return "registration-form";
 		}
-
-		//
-		// whew ... we passed all of the validation checks!
-		// let's get down to business!!!
-		//
 
 		// encrypt the password
 		String encodedPassword = passwordEncoder.encode(account.getPassword());

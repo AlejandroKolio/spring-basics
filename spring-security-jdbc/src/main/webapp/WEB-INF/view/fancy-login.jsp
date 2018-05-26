@@ -25,7 +25,9 @@
 </head>
 <body class="text-center bg-dark">
 <form:form cssClass="form-signin" action="${pageContext.request.contextPath}/authenticateUser" method="post">
-    <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt=""
+         width="72" height="72">
+
     <h1 class="h3 mb-3 font-weight-normal text-light">Please sign in</h1>
 
     <!-- Check for login error -->
@@ -47,17 +49,12 @@
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
 
-</form:form>
+    <button class="btn btn-lg btn-outline-info btn-block" type="submit">Sign In</button>
 
-<div>
     <a href="${pageContext.request.contextPath}/register/showRegistrationForm"
-       class="btn btn-lg btn-secondary btn-block"
-       role="button" aria-pressed="true">
-        Sign Up
+       class="btn btn-lg btn-outline-warning btn-block" role="button" aria-pressed="true">Sign Up
     </a>
-</div>
-
+</form:form>
 </body>
 </html>
