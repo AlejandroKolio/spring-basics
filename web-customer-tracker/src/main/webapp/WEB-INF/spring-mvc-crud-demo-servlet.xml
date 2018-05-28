@@ -37,9 +37,8 @@
     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl"
-                  value="jdbc:mysql://localhost:3306/web_customer_tracker?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"/>
-        <property name="account" value="springstudent"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/web_customer_tracker?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"/>
+        <property name="user" value="springstudent"/>
         <property name="password" value="springstudent"/>
 
         <!-- these are connection pool properties for C3P0 -->
@@ -52,7 +51,7 @@
     <!-- Step 2: Setup Hibernate session factory -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="myDataSource"/>
-        <property name="packagesToScan" value="com.udemy.spring.entity"/>
+        <property name="packagesToScan" value="com.udemy.spring.com.udemy.spring.entity"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>

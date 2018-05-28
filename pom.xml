@@ -35,6 +35,7 @@
 		<module>spring-security-jdbc</module>
 		<module>spring-rest-json-data-binding</module>
         <module>spring-rest-mvc</module>
+        <module>spring-crm-rest</module>
     </modules>
 
 

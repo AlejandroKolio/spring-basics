@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    // Need to inject customer dao
+    // Need to inject customer com.udemy.spring.dao
     @Autowired
     private CustomerService customerService;
 
