@@ -12,5 +12,6 @@
 </head>
 <body>
 <h3>Welcome. Please click<a href="${pageContext.request.contextPath}/restful/hello"> me </a>to see the rest call</h3>
+<a href="${pageContext.request.contextPath}/api/students">Students</a>
 </body>
 </html>

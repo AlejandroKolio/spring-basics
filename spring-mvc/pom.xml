@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.udemy.spring</groupId>
         <artifactId>spring-basics</artifactId>
@@ -9,10 +11,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.udemy.spring.spring-mvc</artifactId>
+    <artifactId>spring-mvc</artifactId>
     <packaging>war</packaging>
 
-    <name>com.udemy.spring.spring-mvc</name>
+    <name>spring-mvc</name>
 
     <properties>
         <jstl.version>1.2</jstl.version>
@@ -66,4 +68,17 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>spring-mvc</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- Add Maven coordinate for: maven-war-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

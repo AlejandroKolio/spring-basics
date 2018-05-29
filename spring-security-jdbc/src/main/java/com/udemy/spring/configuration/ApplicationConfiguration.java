@@ -1,6 +1,10 @@
 package com.udemy.spring.configuration;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+import java.beans.PropertyVetoException;
+import java.util.logging.Logger;
+
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,17 +15,15 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import javax.sql.DataSource;
-import java.beans.PropertyVetoException;
-import java.util.logging.Logger;
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * @author alexander.shakhov on 23.05.2018 13:54
  */
 @Configuration
-@EnableWebMvc // same as  <mvc:annotation-driven/>
-@ComponentScan(basePackages = "com.udemy.spring") // same as <context:component-scan base-package="com.udemy.spring"/>
-@PropertySource("classpath:persistence-mysql.properties")
+@EnableWebMvc
+@ComponentScan("com.udemy.spring")
+@PropertySource({ "classpath:persistence-mysql.properties" })
 public class ApplicationConfiguration {
 
 	// 2. Set up variable to hold the properties.
