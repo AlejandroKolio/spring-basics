@@ -17,6 +17,7 @@
 
 	<properties>
 		<springframework.version>5.0.6.RELEASE</springframework.version>
+		<springsecurity.version>5.0.5.RELEASE</springsecurity.version>
 		<hibernate.version>5.2.17.Final</hibernate.version>
 		<mysql.connector.version>8.0.11</mysql.connector.version>
 		<c3po.version>0.9.5.2</c3po.version>
@@ -40,6 +41,17 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+		<!--SECURITY-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
 		</dependency>
 		<!-- Add Jackson for JSON converters -->
 		<dependency>

@@ -12,7 +12,7 @@ public interface CustomerDAO {
 
 	List<Customer> getCustomers();
 
-	void saveCustomer(Customer customer);
+	void saveOrUpdateCustomer(Customer customer);
 
 	Customer getCustomer(Integer id);
 
